@@ -1,0 +1,83 @@
+.contato {
+  background: #000;
+  color: #fff;
+}
+
+.contato-container {
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 100px;
+  padding: 100px 20px;
+  position: relative;
+}
+
+.contato-container::before {
+  display: block;
+  content: "";
+  width: 130px;
+  height: 130px;
+  background: url(/img/Detalhe.svg) no-repeat center;
+  position: absolute;
+  top: -60px;
+}
+
+.texto-contato {
+  color: #b8b8b8;
+  font-size: 1.25rem;
+  line-height: 1.33;
+  width: 40ch;
+  align-self: center;
+}
+
+.contato-lista {
+  list-style: none;
+  display: grid;
+  gap: 40px;
+}
+
+.contato-lista-item {
+  font-size: 2rem;
+  line-height: 1.11;
+}
+
+.contato-lista-item a {
+  color: #fff;
+}
+
+.copy {
+  color: #7a7a7a;
+  line-height: 1.33;
+  font-size: 1.125rem;
+}
+
+@media (max-width: 1000px) {
+  .contato-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 800px) {
+  .contato-container::before {
+    top: 90px;
+    left: 20px;
+    width: 30px;
+    height: 10px;
+  }
+}
+
+@media (max-width: 450px) {
+  .texto-contato {
+    width: 100%;
+  }
+
+  .contato-lista-item {
+    font-size: 1.25rem;
+  }
+
+  .copy {
+    font-size: 0.875rem;
+  }
+}
